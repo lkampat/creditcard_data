@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Credit Card Data Fraud Detection</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mobile.css' %}">
+	<script type='text/javascript' src='js/mobile.js'></script>
+</head>
+<body>
+	<div id="header">
+		<h1><a href="index">Credit Card Data Fraud Detection <span></span></a></h1>
+		<ul id="navigation">
+			<li class="current">
+				<a href="index">Home</a>
+			</li>
+		</ul>
+<p>Click on the "Choose File" button to upload a file:</p>
+
+<form action="/action_page.php">
+  <input type="file" id="myFile" name="filename">
+  <input type="submit" name='upload_btn' value='upload' enctype="multipart/form-data">
+</form>
+
+		<form action="download" method="POST">
+         {% csrf_token %}
+			 <input type="submit" name="gNB" value="Gaussian Naive Bayes" class="btn btn-success">
+             <input type="submit" name="lg" value="Logistic Regression" class="btn btn-success">
+             <input type="submit" name="rfc" value="Random Forest" class="btn btn-success">
+</form>
+	</div>
+
+
+
+	</div>
+</body>
+</html>
