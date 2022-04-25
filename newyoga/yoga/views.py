@@ -15,12 +15,12 @@ def upload(request):
 
 
 def model_data(request):
-    path='/webyoga - Copy/newyoga/yoga/'
+    path='/newyoga/yoga/'
     file='test_preprocessed.csv'
     if os.path.exists(path+file):
         os.remove(path+file)
 
-    '''os.remove('/webyoga - Copy/newyoga/yoga/test_preprocessed.csv')'''
+    '''os.remove('/newyoga/yoga/test_preprocessed.csv')'''
 
     if request.method == 'POST' and request.FILES['test_preprocessed']:
         test_preprocessed = request.FILES['test_preprocessed']
@@ -37,7 +37,7 @@ def model_data(request):
 
 '''test_data_preprocessed = pd.read_csv('filename')'''
 def Data_set(request):
-    Sample_data = pd.read_csv('/webyoga - Copy/newyoga/yoga/Sample_data.csv')
+    Sample_data = pd.read_csv('/newyoga/yoga/Sample_data.csv')
     filename = 'Sample_data.csv'
     response = HttpResponse(open(filename, 'rb').read(), content_type='text/csv')
     response['Content-Length'] = os.path.getsize(filename)
@@ -46,7 +46,7 @@ def Data_set(request):
 
 
 def models(request):
-    test_data_preprocessed = pd.read_csv('/webyoga - Copy/newyoga/yoga/test_preprocessed.csv')
+    test_data_preprocessed = pd.read_csv('/newyoga/yoga/test_preprocessed.csv')
     if 'gNB' in request.POST:
         gaussian = pickle.load(open('gNB.sav', 'rb'))
         y_pred = gaussian.predict(test_data_preprocessed)
