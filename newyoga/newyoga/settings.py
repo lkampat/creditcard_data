@@ -60,6 +60,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
@@ -112,7 +113,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, '/webyoga/newyoga/static/')
+    os.path.join(BASE_DIR, '/webyoga - Copy/newyoga/static/')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
@@ -120,3 +121,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = '/webyoga - Copy/'
+MEDIAFILES_DIRS = [
+    os.path.join(BASE_DIR, '/webyoga - Copy/newyoga')
+]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'yoga')
