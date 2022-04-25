@@ -113,7 +113,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, '/webyoga - Copy/newyoga/static/')
+    os.path.join(BASE_DIR, '/newyoga/static/')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
@@ -122,8 +122,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/webyoga - Copy/'
+MEDIA_URL = '/newyoga/'
 MEDIAFILES_DIRS = [
-    os.path.join(BASE_DIR, '/webyoga - Copy/newyoga')
+    os.path.join(BASE_DIR, '/newyoga')
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'yoga')
